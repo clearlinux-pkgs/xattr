@@ -4,7 +4,7 @@
 #
 Name     : xattr
 Version  : 0.7.8
-Release  : 13
+Release  : 14
 URL      : https://pypi.python.org/packages/source/x/xattr/xattr-0.7.8.tar.gz
 Source0  : https://pypi.python.org/packages/source/x/xattr/xattr-0.7.8.tar.gz
 Summary  : Python wrapper for extended filesystem attributes
