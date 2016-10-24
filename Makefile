@@ -1,5 +1,5 @@
 PKG_NAME := xattr
-URL := https://pypi.python.org/packages/source/x/xattr/xattr-0.8.0.tar.gz
+URL := http://pypi.debian.net/xattr/xattr-0.9.1.tar.gz
 ARCHIVES :=
 
 include ../common/Makefile.common
