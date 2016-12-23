@@ -4,7 +4,7 @@
 #
 Name     : xattr
 Version  : 0.9.1
-Release  : 22
+Release  : 23
 URL      : http://pypi.debian.net/xattr/xattr-0.9.1.tar.gz
 Source0  : http://pypi.debian.net/xattr/xattr-0.9.1.tar.gz
 Summary  : Python wrapper for extended filesystem attributes
