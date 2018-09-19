@@ -4,7 +4,7 @@
 #
 Name     : xattr
 Version  : 0.9.6
-Release  : 29
+Release  : 30
 URL      : https://files.pythonhosted.org/packages/60/80/a1f35bfd3c7ffb78791b2a6a15c233584a102a20547fd96d48933ec453e7/xattr-0.9.6.tar.gz
 Source0  : https://files.pythonhosted.org/packages/60/80/a1f35bfd3c7ffb78791b2a6a15c233584a102a20547fd96d48933ec453e7/xattr-0.9.6.tar.gz
 Summary  : Python wrapper for extended filesystem attributes
@@ -24,7 +24,7 @@ Extended attributes extend the basic attributes of files and directories
 %package bin
 Summary: bin components for the xattr package.
 Group: Binaries
-Requires: xattr-license
+Requires: xattr-license = %{version}-%{release}
 
 %description bin
 bin components for the xattr package.
@@ -41,7 +41,7 @@ license components for the xattr package.
 %package python
 Summary: python components for the xattr package.
 Group: Default
-Requires: xattr-python3
+Requires: xattr-python3 = %{version}-%{release}
 
 %description python
 python components for the xattr package.
@@ -64,14 +64,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1533060505
+export SOURCE_DATE_EPOCH=1537392610
 python3 setup.py build -b py3
 
 %check
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-PYTHONPATH=%{buildroot}/usr/lib/python3.7/site-packages python3 setup.py test || :
+PYTHONPATH=%{buildroot}/usr/lib/python3.7/site-packages python3 setup.py test
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/xattr
