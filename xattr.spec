@@ -4,7 +4,7 @@
 #
 Name     : xattr
 Version  : 0.9.7
-Release  : 37
+Release  : 38
 URL      : https://files.pythonhosted.org/packages/c1/74/1ff659d6deb1d2d6babb9483171edfa330264ae2cbf005035bb7a77b07d2/xattr-0.9.7.tar.gz
 Source0  : https://files.pythonhosted.org/packages/c1/74/1ff659d6deb1d2d6babb9483171edfa330264ae2cbf005035bb7a77b07d2/xattr-0.9.7.tar.gz
 Summary  : Python wrapper for extended filesystem attributes
@@ -19,10 +19,12 @@ BuildRequires : buildreq-distutils3
 BuildRequires : cffi
 
 %description
-xattr
------
-.. image:: https://travis-ci.org/xattr/xattr.svg?branch=master
-:target: https://travis-ci.org/xattr/xattr
+Extended attributes extend the basic attributes of files and directories
+in the file system.  They are stored as name:data pairs associated with
+file system objects (files, directories, symlinks, etc).
+
+Extended attributes are currently only available on Darwin 8.0+ (Mac OS X 10.4)
+and Linux 2.6+. Experimental support is included for Solaris and FreeBSD.
 
 %package bin
 Summary: bin components for the xattr package.
@@ -54,6 +56,7 @@ python components for the xattr package.
 Summary: python3 components for the xattr package.
 Group: Default
 Requires: python3-core
+Provides: pypi(xattr)
 
 %description python3
 python3 components for the xattr package.
@@ -68,7 +71,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1575401208
+export SOURCE_DATE_EPOCH=1582901875
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
